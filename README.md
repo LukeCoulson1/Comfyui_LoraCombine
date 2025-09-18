@@ -60,7 +60,7 @@ The node merges LoRA weights by:
 
 ## Credits
 
-- Original concept and initial implementation by this repository's author
+- Original concept and initial implementation by Snowshoes311
 - Major enhancements to merging methods and compatibility checks by @sweetmax797
 
 ## License
