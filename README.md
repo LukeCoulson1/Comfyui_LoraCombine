@@ -1,18 +1,19 @@
 # ComfyUI LoRA Combine Node
 
-A custom ComfyUI node that allows you to combine two LoRAs with adjustable strengths.
+A custom ComfyUI node that allows you to combine two LoRAs with adjustable strengths and multiple merging methods.
 
 ## Features
 
 - Combine two LoRA files from your ComfyUI loras folder
 - Adjust the strength of each LoRA independently (-100.0 to 100.0)
+- Choose merge method (linear, weighted average, concatenation) with optional compatibility checks
 - Output a merged LoRA_MODEL that can be used with other ComfyUI nodes
 - Works with any LoRA format (Stable Diffusion, Qwen, etc.) as long as they have compatible tensor structures
 
 ## Installation
 
 1. Download or clone this repository
-2. Copy the `Comfyui_LoraCombine` folder to your `ComfyUI/custom_nodes/` directory
+2. Copy the `Comfyui_LoraCombine` folder to your `ComfyUI/custom_nodes/` directory (or clone the repo directly there)
 3. Restart ComfyUI
 
 The node will appear as "Combine LoRAs" in the "loaders" category.
@@ -55,6 +56,12 @@ The node merges LoRA weights by:
 
 - ComfyUI (with training nodes enabled for saving)
 - PyTorch (included with ComfyUI)
+- safetensors (only for compatibility checks)
+
+## Credits
+
+- Original concept and initial implementation by this repository's author
+- Major enhancements to merging methods and compatibility checks by @sweetmax797
 
 ## License
 
